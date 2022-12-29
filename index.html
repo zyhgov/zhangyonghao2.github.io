@@ -1,201 +1,55 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en" >
 <head>
-<meta charset="utf-8">
-<title>耶酷安(中国)登录界面</title>
-	<style type="text/css">
-		html {
-  height: 100%;
-}
-body {
-  margin:0;
-  padding:0;
-  font-family: sans-serif;
-  background: linear-gradient(#141e30, #243b55);
-}
+  <meta charset="UTF-8">
+  <title>CodePen - Flex Hover Slider | HTML + CSS + jQuery</title>
+  <link rel="stylesheet" href="./style.css">
 
-.login-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 400px;
-  padding: 40px;
-  transform: translate(-50%, -50%);
-  background: rgba(0,0,0,.5);
-  box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(0,0,0,.6);
-  border-radius: 10px;
-}
-
-.login-box h2 {
-  margin: 0 0 30px;
-  padding: 0;
-  color: #fff;
-  text-align: center;
-}
-
-.login-box .user-box {
-  position: relative;
-}
-
-.login-box .user-box input {
-  width: 100%;
-  padding: 10px 0;
-  font-size: 16px;
-  color: #fff;
-  margin-bottom: 30px;
-  border: none;
-  border-bottom: 1px solid #fff;
-  outline: none;
-  background: transparent;
-}
-.login-box .user-box label {
-  position: absolute;
-  top:0;
-  left: 0;
-  padding: 10px 0;
-  font-size: 16px;
-  color: #fff;
-  pointer-events: none;
-  transition: .5s;
-}
-
-.login-box .user-box input:focus ~ label,
-.login-box .user-box input:valid ~ label {
-  top: -20px;
-  left: 0;
-  color: #03e9f4;
-  font-size: 12px;
-}
-
-.login-box form a {
-  position: relative;
-  display: inline-block;
-  padding: 10px 20px;
-  color: #03e9f4;
-  font-size: 16px;
-  text-decoration: none;
-  text-transform: uppercase;
-  overflow: hidden;
-  transition: .5s;
-  margin-top: 40px;
-  letter-spacing: 4px
-}
-
-.login-box a:hover {
-  background: #03e9f4;
-  color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 5px #03e9f4,
-              0 0 25px #03e9f4,
-              0 0 50px #03e9f4,
-              0 0 100px #03e9f4;
-}
-
-.login-box a span {
-  position: absolute;
-  display: block;
-}
-
-.login-box a span:nth-child(1) {
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #03e9f4);
-  animation: btn-anim1 1s linear infinite;
-}
-
-@keyframes btn-anim1 {
-  0% {
-    left: -100%;
-  }
-  50%,100% {
-    left: 100%;
-  }
-}
-
-.login-box a span:nth-child(2) {
-  top: -100%;
-  right: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(180deg, transparent, #03e9f4);
-  animation: btn-anim2 1s linear infinite;
-  animation-delay: .25s
-}
-
-@keyframes btn-anim2 {
-  0% {
-    top: -100%;
-  }
-  50%,100% {
-    top: 100%;
-  }
-}
-
-.login-box a span:nth-child(3) {
-  bottom: 0;
-  right: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(270deg, transparent, #03e9f4);
-  animation: btn-anim3 1s linear infinite;
-  animation-delay: .5s
-}
-
-@keyframes btn-anim3 {
-  0% {
-    right: -100%;
-  }
-  50%,100% {
-    right: 100%;
-  }
-}
-
-.login-box a span:nth-child(4) {
-  bottom: -100%;
-  left: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(360deg, transparent, #03e9f4);
-  animation: btn-anim4 1s linear infinite;
-  animation-delay: .75s
-}
-
-@keyframes btn-anim4 {
-  0% {
-    bottom: -100%;
-  }
-  50%,100% {
-    bottom: 100%;
-  }
-}
-
-	</style>
 </head>
-
 <body>
-	<div class="login-box">
-	<h2>耶酷安&reg;(中国)</h2>
-  	<h2>Login 登录</h2>
-  <form>
-    <div class="user-box">
-      <input type="text" name="" required="">
-      <label>Username | 用户名称</label>
-    </div>
-    <div class="user-box">
-      <input type="password" name="" required="">
-      <label>Password | 口令密码</label>
-    </div>
-    <a href="#">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      Submit | 提交
-    </a>
-  </form>
+<!-- partial:index.partial.html -->
+<div class="flex-container">
+	<div class="spinner"><p>
+		<div class="cube1"></div>
+		<div class="cube2"></div>
+		Loading...
+		</p>
+	</div>
+	<div class="flex-slide home">
+		<div class="flex-title flex-title-home">耶酷安&copy;Yakuan</div>
+		<div class="flex-about flex-about-home"><p>湖北省十大杰出青年，荣获2022届台湾金扫帚奖。<br />于2022年9月进入襄阳职业技术学院深造学习。</p></div>
+	</div>
+	<div class="flex-slide about">
+		<div class="flex-title">关于他legend</div>
+		<div class="flex-about"><p>《圣经》中记载耶酷安在亚伯拉罕诸般苦难之中，耶稣基督降临。<br />从此，一个在埃及长大、信奉基督教的男子成长为一个传道人，他就是耶酷安。</p></div>
+	</div>
+	<div class="flex-slide work">
+		<div class="flex-title">世界范围worldwide</div>
+		<div class="flex-about"><p>有人的地方就有麻雀，同时也有耶酷安：</p>
+			<ul>
+				<li>全世界都有他的声音。</li>
+				<li>His voice is heard all over the world.</li>
+				<li>世界中に彼の声がある。</li>
+				<li>전 세계에 그의 목소리가 있다.</li>
+			</ul>
+		</div>
+	</div>
+	<div class="flex-slide contact">
+		<div class="flex-title">联系耶酷安📧</div>
+				<div class="flex-about">
+					<p>利用下面的表格帮您联系耶酷安💁✉️</p>
+					<form class="contact-form">
+						<p>邮件📧<input type="text" name="email"></p>
+						<p>评论🥳<textarea type="text" name="comment" row="5"></textarea></p>
+						<p><input type="submit" name="email" value="Send Message"></p>
+					</form>
+
+		</div>
+	</div>
 </div>
+<!-- partial -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/jquery.waitforimages.min.js"></script><script  src="./script.js"></script>
+
 </body>
 </html>
